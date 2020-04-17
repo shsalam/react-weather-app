@@ -1,0 +1,31 @@
+{
+  "name": "react-weather-app",
+  "version": "1.0.0",
+  "description": "A full stack weather application using PostgreSQL, Express, React, and Node.js. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheef-code/react-weather-app.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Shifath Salam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sheef-code/react-weather-app/issues"
+  },
+  "homepage": "https://github.com/sheef-code/react-weather-app#readme",
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "pg": "^8.0.2"
+  }
+}
