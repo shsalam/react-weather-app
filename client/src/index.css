@@ -14,8 +14,25 @@ body {
       0 0,
     radial-gradient(circle closest-side, #ffffff 50%, rgba(255, 255, 255, 0) 0)
       55px 0 #48b;
-  background-size: 110px 200px;
+  background-size: 110px 1000px;
   background-repeat: repeat-x;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
 }
 
 .inner-wrapper {
@@ -61,4 +78,14 @@ h2 {
 
 .table {
   color: #fff;
+}
+
+.footer {
+  align-items: center;
+  justify-content: space-between;
+  padding: rem 1rem;
+}
+
+.text {
+  font-size: 1rem;
 }

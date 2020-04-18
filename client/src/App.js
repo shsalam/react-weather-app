@@ -14,7 +14,9 @@ import {
   Col,
 } from "reactstrap";
 
-import Weather from "./Weather";
+import Weather from "./components/Weather";
+import logo from "./assets/logo.png";
+import Footer from "./components/Footer";
 
 class App extends Component {
   constructor(props) {
@@ -31,7 +33,7 @@ class App extends Component {
     fetch("/api/cities")
       .then((res) => res.json())
       .then((res) => {
-        var cityList = res.map((r) => r.city_name);
+        let cityList = res.map((r) => r.city_name);
         this.setState({ cityList });
       });
   };
@@ -74,7 +76,9 @@ class App extends Component {
     return (
       <Container fluid className="centered">
         <Navbar dark color="dark">
-          <NavbarBrand href="/">Weather Disk</NavbarBrand>
+          <NavbarBrand href="/">
+            <img src={logo} alt="Weather Icon" />
+          </NavbarBrand>
         </Navbar>
         <Row>
           <Col>
@@ -109,7 +113,9 @@ class App extends Component {
                   <option>No cities added yet.</option>
                 )}
                 {this.state.cityList.length > 0 && (
-                  <option>Select a city.</option>
+                  <option selected hidden>
+                    Select a city.
+                  </option>
                 )}
                 {this.state.cityList.map((city, i) => (
                   <option key={i}>{city}</option>
@@ -119,6 +125,7 @@ class App extends Component {
           </Col>
         </Row>
         <Weather data={this.state.weather} />
+        <Footer />
       </Container>
     );
   }
