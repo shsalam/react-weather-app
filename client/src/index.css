@@ -89,3 +89,14 @@ h2 {
 .text {
   font-size: 1rem;
 }
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 400px) {
+  .display-3 {
+    font-size: 3rem;
+  }
+  .row {
+    margin-bottom: 20px;
+  }
+}
