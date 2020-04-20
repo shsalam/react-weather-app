@@ -2,11 +2,10 @@ const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
 
-let db = require("./database");
+var db = require("./database");
 
-// for deployment
-const ENV = process.env.NODE_ENV; // information of what type of development we're in
-const PORT = process.env.PORT || 5000; // express server port
+const ENV = process.env.NODE_ENV;
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 app.use(express.json());
@@ -24,7 +23,7 @@ if (ENV === "production") {
 }
 
 app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}...`);
+  console.log(`Server listening on port ${PORT}!`);
 });
 
 db.query("SELECT NOW()", (err, res) => {
